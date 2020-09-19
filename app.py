@@ -102,7 +102,7 @@ class GoodreadsAPIClient:
 
 
 if __name__ == '__main__':
-    url = str(input())
+    url = str(input()).strip()
     try:
         api_caller = GoodreadsAPIClient()
         out = api_caller.get_book_details(url=url)
