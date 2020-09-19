@@ -42,6 +42,7 @@ class GoodreadsAPIClient:
             sub_paths[0] = int(sub_paths[0])
             assert sub_paths[-1] == 'xml'
             assert isinstance(sub_paths[0],int)
+            assert sub_paths[0] >= 0
         except AssertionError:
             raise InvalidGoodreadsURL('''Invalid URL Format, please follow 
                                        API URL FORMAT as stated in doc''')
